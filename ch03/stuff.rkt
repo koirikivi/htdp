@@ -54,31 +54,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; CAT PROGRAM
-; WorldState is a Number
-; interpret: time passed since beginning
-(define CAT1 (bitmap "cat1.png"))
-(define CAT2 (bitmap "cat1.png"))
-(define CAT-SPEED 3)
-(define CAT-Y 3)
-
-(define cat-program
-  (big-bang 0
-            [to-draw create-cat-scene]
-            [on-tick cat-pos]
-            [stop-when cat-end?]))
-
-; WorldState -> Image
-; Place the cat on the canvas
-;
-(define (create-cat-scene t)
-  (place-image CAT1
-               t CAT-Y
-               // TODO
-
-;; /CAT PROGRAM
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (test)
 ;(cat-program)
